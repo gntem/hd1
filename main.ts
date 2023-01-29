@@ -19,4 +19,6 @@ app.addEventListener('listen', (e) => {
 })
 app.use(router.routes());
 app.use(router.allowedMethods());
-app.listen({ port: Deno.env.get('PORT') || 8080 });
+
+
+app.listen({ port:  Number(Deno.env.get('PORT')) || 8080 });
